@@ -4,6 +4,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { TagButton } from "./tag-button";
+import { Button } from "@/components/ui/button";
 
 interface BusinessHoursStepProps {
     onNext: () => void;
@@ -83,12 +84,12 @@ export const BusinessHours = ({ onNext, onBack }: BusinessHoursStepProps) => {
     };
 
     return (
-        <div className="space-y-8">
+        <div className="space-y-8 text-black">
             <div className="space-y-6">
                 <div className="space-y-4">
                     <div>
                         <Label className="text-sm font-medium">Business Hours</Label>
-                        <p className="text-xs text-muted-foreground">(When can your clients make an appointment)</p>
+                        <p className="text-xs text-border mt-1">(When can your clients make an appointment)</p>
                     </div>
 
                     <div className="space-y-3">
@@ -100,7 +101,7 @@ export const BusinessHours = ({ onNext, onBack }: BusinessHoursStepProps) => {
                                         checked={enabled}
                                         onCheckedChange={(checked) => updateDaySchedule(day, !!checked)}
                                     />
-                                    <label htmlFor={day} className="text-sm font-medium min-w-[80px]">
+                                    <label htmlFor={day} className="text-sm font-medium min-w-[80px] cursor-pointer">
                                         {day}
                                     </label>
                                 </div>
@@ -121,7 +122,7 @@ export const BusinessHours = ({ onNext, onBack }: BusinessHoursStepProps) => {
                                                 ))}
                                             </SelectContent>
                                         </Select>
-                                        <span className="text-xs text-muted-foreground">to</span>
+                                        <span className="text-xs text-border mt-1">to</span>
                                         <Select
                                             value={closeTime}
                                             onValueChange={(time) => updateDayTime(day, 'closeTime', time)}
@@ -139,7 +140,7 @@ export const BusinessHours = ({ onNext, onBack }: BusinessHoursStepProps) => {
                                         </Select>
                                     </div>
                                 ) : (
-                                    <span className="text-sm text-muted-foreground">Closed</span>
+                                    <span className="text-sm text-border">Closed</span>
                                 )}
                             </div>
                         ))}
@@ -149,7 +150,7 @@ export const BusinessHours = ({ onNext, onBack }: BusinessHoursStepProps) => {
                 <div className="space-y-4">
                     <div>
                         <Label className="text-sm font-medium">Services</Label>
-                        <p className="text-xs text-muted-foreground">(Lets your clients know the services you provide)</p>
+                        <p className="text-xs text-border mt-1">(Lets your clients know the services you provide)</p>
                     </div>
 
                     <div className="flex flex-wrap gap-2">
@@ -172,7 +173,7 @@ export const BusinessHours = ({ onNext, onBack }: BusinessHoursStepProps) => {
                 <div className="space-y-4">
                     <div>
                         <Label className="text-sm font-medium">Team Size</Label>
-                        <p className="text-xs text-muted-foreground">(You can have unlimited number of teams for free)</p>
+                        <p className="text-xs text-border mt-1">(You can have unlimited number of teams for free)</p>
                     </div>
 
                     <RadioGroup value={teamSize} onValueChange={handleTeamSizeChange}>
@@ -207,16 +208,17 @@ export const BusinessHours = ({ onNext, onBack }: BusinessHoursStepProps) => {
             <div className="flex justify-between">
                 <button
                     onClick={onBack}
-                    className="bg-card text-card-foreground border border-border px-8 py-3 rounded-md text-sm font-medium hover:bg-secondary/50 transition-colors"
+                    className="bg-card text-card-foreground border border-border px-8 py-3 rounded-[5px] text-sm font-medium hover:bg-secondary/50 transition-colors cursor-pointer"
                 >
                     Back
                 </button>
-                <button
+                <Button
+                variant="dark"
                     onClick={onNext}
-                    className="bg-primary text-primary-foreground px-8 py-3 rounded-md text-sm font-medium hover:bg-primary/90 transition-colors"
+                    className="px-8 rounded-[5px] text-sm font-medium py-6 transition-colors"
                 >
                     Save & Continue
-                </button>
+                </Button>
             </div>
         </div>
     );

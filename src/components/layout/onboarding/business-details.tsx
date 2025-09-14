@@ -4,6 +4,7 @@ import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Textarea } from "@/components/ui/textarea";
 import { TagButton } from "./tag-button";
+import { Button } from "@/components/ui/button";
 
 interface BusinessDetailsStepProps {
     onNext: () => void;
@@ -28,38 +29,40 @@ export const BusinessDetails = ({ onNext }: BusinessDetailsStepProps) => {
         );
     };
 
+    // 
+
     return (
         <div className="space-y-8">
-            <div className="space-y-4">
+            <div className="space-y-8">
                 <div className="space-y-2">
                     <Label htmlFor="businessName" className="text-sm font-medium">Business Name</Label>
                     <Input
                         id="businessName"
                         value={businessName}
                         onChange={(e) => setBusinessName(e.target.value)}
-                        className="bg-card"
+                        className="bg-card py-5"
                     />
                 </div>
 
                 <div className="space-y-4">
                     <Label className="text-sm font-medium">Business Type</Label>
                     <RadioGroup value={businessType} onValueChange={setBusinessType}>
-                        <div className="flex items-center space-x-2">
-                            <RadioGroupItem value="independent" id="independent" className="border-2" />
+                        <div className="flex gap-2">
+                            <RadioGroupItem value="independent" id="independent" className="border border-black mt-1" />
                             <div>
                                 <label htmlFor="independent" className="text-sm font-medium cursor-pointer">
                                     Independent Service
                                 </label>
-                                <p className="text-xs text-muted-foreground">(Self Employed / Mobile Service)</p>
+                                <p className="text-xs text-border mt-1">(Self Employed / Mobile Service)</p>
                             </div>
                         </div>
-                        <div className="flex items-center space-x-2">
-                            <RadioGroupItem value="salon" id="salon" className="border-2" />
+                        <div className="flex gap-2">
+                            <RadioGroupItem value="salon" id="salon" className="border border-black mt-1"/>
                             <div>
                                 <label htmlFor="salon" className="text-sm font-medium cursor-pointer">
                                     Salon/ Spa Studio
                                 </label>
-                                <p className="text-xs text-muted-foreground">(Physical Shop)</p>
+                                <p className="text-xs text-border mt-1">(Physical Shop)</p>
                             </div>
                         </div>
                     </RadioGroup>
@@ -82,14 +85,14 @@ export const BusinessDetails = ({ onNext }: BusinessDetailsStepProps) => {
 
                 <div className="space-y-2">
                     <Label htmlFor="bio" className="text-sm font-medium">
-                        Bio <span className="text-muted-foreground">(Tell us about your business minimum of 250 words)</span>
+                        Bio <span className="text-border font-light">(Tell us about your business minimum of 250 words)</span>
                     </Label>
                     <Textarea
                         id="bio"
                         placeholder="Write Here"
                         value={bio}
                         onChange={(e) => setBio(e.target.value)}
-                        className="min-h-[120px] bg-card resize-none"
+                        className="min-h-[120px] bg-card resize-none placeholder:text-border"
                     />
                 </div>
 
@@ -97,7 +100,8 @@ export const BusinessDetails = ({ onNext }: BusinessDetailsStepProps) => {
                     <Label htmlFor="location" className="text-sm font-medium">Business Location</Label>
                     <Input
                         id="location"
-                        className="bg-card"
+                        className="bg-card py-5 placeholder:text-border"
+                        placeholder="Location"
                     />
                 </div>
 
@@ -105,13 +109,13 @@ export const BusinessDetails = ({ onNext }: BusinessDetailsStepProps) => {
                     <Label className="text-sm font-medium">Do you provide home service?</Label>
                     <RadioGroup value={homeService} onValueChange={setHomeService}>
                         <div className="flex items-center space-x-2">
-                            <RadioGroupItem value="yes" id="yes" className="border-2" />
+                            <RadioGroupItem value="yes" id="yes" className="border border-black" />
                             <label htmlFor="yes" className="text-sm font-medium cursor-pointer">
                                 Yes
                             </label>
                         </div>
                         <div className="flex items-center space-x-2">
-                            <RadioGroupItem value="no" id="no" className="border-2" />
+                            <RadioGroupItem value="no" id="no" className="border border-black" />
                             <label htmlFor="no" className="text-sm font-medium cursor-pointer">
                                 No
                             </label>
@@ -121,12 +125,13 @@ export const BusinessDetails = ({ onNext }: BusinessDetailsStepProps) => {
             </div>
 
             <div className="flex justify-end">
-                <button
+                <Button
+                variant="dark"
                     onClick={onNext}
-                    className="bg-primary text-primary-foreground px-8 py-3 rounded-md text-sm font-medium hover:bg-primary/90 transition-colors"
+                    className="px-8 py-3 rounded-[5px] py-6 text-sm font-medium transition-colors hover:bg-card-foreground"
                 >
                     Save & Continue
-                </button>
+                </Button>
             </div>
         </div>
     );

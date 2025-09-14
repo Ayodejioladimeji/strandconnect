@@ -8,7 +8,7 @@ interface ProgressIndicatorProps {
 
 export const ProgressIndicator = ({ steps, currentStep }: ProgressIndicatorProps) => {
     return (
-        <div className="flex items-center justify-center mb-12">
+        <div className="flex items-center gap-10 justify-center mb-12 text-black">
             {steps.map((step, index) => (
                 <div key={step} className="flex items-center">
                     <div className="flex flex-col items-center">
@@ -25,7 +25,8 @@ export const ProgressIndicator = ({ steps, currentStep }: ProgressIndicatorProps
                                 <span className="text-sm font-medium">{index + 1}</span>
                             )}
                         </div>
-                        <span className="text-sm font-medium text-foreground mt-2">{step}</span>
+                        
+                        <span className="text-sm font-medium mt-2">{step}</span>
                     </div>
                     {index < steps.length - 1 && (
                         <div

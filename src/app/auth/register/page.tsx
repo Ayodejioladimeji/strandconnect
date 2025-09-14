@@ -9,6 +9,7 @@ import { Label } from '@/components/ui/label';
 import { AppleIcon, Eye, EyeOff } from 'lucide-react';
 import { GoogleIcon, LogoBlack } from '../../../../public/image/svgs';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 const Register = () => {
     const [showPassword, setShowPassword] = useState(false);
@@ -19,6 +20,7 @@ const Register = () => {
         password: '',
         agreeToTerms: false,
     });
+    const router = useRouter()
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
@@ -154,6 +156,7 @@ const Register = () => {
                             variant="dark"
                             className="w-full py-6"
                             disabled={!formData.agreeToTerms}
+                            onClick={() => router.push("/onboarding")}
                         >
                             Sign up
                         </Button>

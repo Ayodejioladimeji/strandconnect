@@ -125,6 +125,37 @@
   
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading), serif;
+    color: text-black
   }
   
+}
+
+@layer components {
+  .step-indicator {
+    @apply flex items-center justify-center w-8 h-8 rounded-full border-2;
+  }
+  
+  .step-indicator.completed {
+    @apply bg-black border text-white;
+  }
+  
+  .step-indicator.current {
+    @apply bg-black border text-white;
+  }
+  
+  .step-indicator.pending {
+    @apply bg-transparent border-border text-border;
+  }
+
+  .step-connector {
+    @apply flex-1 h-0.5 mx-2;
+  }
+  
+  .step-connector.completed {
+    @apply bg-primary;
+  }
+  
+  .step-connector.pending {
+    @apply bg-foreground;
+  }
 }

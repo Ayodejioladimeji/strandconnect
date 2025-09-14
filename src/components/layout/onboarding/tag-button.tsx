@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 interface TagButtonProps {
@@ -14,17 +15,17 @@ export const TagButton = ({
     variant = "primary"
 }: TagButtonProps) => {
     return (
-        <button
-            type="button"
+        <Button
+        variant="dark"
             onClick={onClick}
             className={cn(
-                "px-4 py-2 rounded-md text-sm font-medium border transition-colors",
+                "px-4 py-2 rounded-md text-sm font-medium border transition-colors font-light cursor-pointer",
                 selected
-                    ? "bg-primary text-primary-foreground border-primary"
-                    : "bg-card text-card-foreground border-tag-border hover:bg-secondary/50"
+                    ? "bg-black text-white border"
+                    : "bg-card text-card-foreground border hover:bg-secondary/50"
             )}
         >
             {children}
-        </button>
+        </Button>
     );
 };

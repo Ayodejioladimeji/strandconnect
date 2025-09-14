@@ -3,6 +3,7 @@ import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
 
 interface PaymentInfoStepProps {
     onNext: () => void;
@@ -21,20 +22,21 @@ export const PaymentInfo = ({ onNext, onBack }: PaymentInfoStepProps) => {
                 <div className="space-y-4">
                     <div>
                         <Label className="text-sm font-medium">Add payment information</Label>
-                        <p className="text-xs text-muted-foreground">(As with other info, you can change this later.)</p>
+                        <p className="text-xs text-border mt-1">(As with other info, you can change this later.)</p>
                     </div>
 
-                    <div className="flex items-start space-x-2">
+                    <div className="flex gap-2 ">
                         <Checkbox
                             id="deposit"
                             checked={requireDeposit}
                             onCheckedChange={(checked) => setRequireDeposit(!!checked)}
+                            className="mt-1"
                         />
                         <div>
                             <label htmlFor="deposit" className="text-sm font-medium cursor-pointer">
                                 Do you require a deposit to be paid?
                             </label>
-                            <p className="text-xs text-muted-foreground">
+                            <p className="text-xs text-border mt-1">
                                 (By enabling deposits, Afrihub is able to take payment on your behalf.)
                             </p>
                         </div>
@@ -75,11 +77,12 @@ export const PaymentInfo = ({ onNext, onBack }: PaymentInfoStepProps) => {
                     )}
                 </div>
 
-                <div className="flex items-start space-x-2">
+                <div className="flex items-start gap-2">
                     <Checkbox
                         id="terms"
                         checked={acceptTerms}
                         onCheckedChange={(checked) => setAcceptTerms(!!checked)}
+                        className="mt-1"
                     />
                     <div>
                         <label htmlFor="terms" className="text-sm cursor-pointer">
@@ -95,16 +98,17 @@ export const PaymentInfo = ({ onNext, onBack }: PaymentInfoStepProps) => {
             <div className="flex justify-between">
                 <button
                     onClick={onBack}
-                    className="bg-card text-card-foreground border border-border px-8 py-3 rounded-md text-sm font-medium hover:bg-secondary/50 transition-colors"
+                    className="bg-card text-card-foreground border border-border px-8 py-3 rounded-[5px] text-sm font-medium hover:bg-secondary/50 transition-colors cursor-pointer"
                 >
                     Back
                 </button>
-                <button
+                <Button
+                variant="dark"
                     onClick={onNext}
-                    className="bg-primary text-primary-foreground px-8 py-3 rounded-md text-sm font-medium hover:bg-primary/90 transition-colors"
+                    className="px-8 py-6 rounded-[5px] text-sm font-medium transition-colors"
                 >
                     Submit
-                </button>
+                </Button>
             </div>
         </div>
     );
