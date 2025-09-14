@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -15,6 +15,31 @@ export const PaymentInfo = ({ onNext, onBack }: PaymentInfoStepProps) => {
     const [cancellationPolicy, setCancellationPolicy] = useState("24-hours");
     const [customPolicy, setCustomPolicy] = useState("");
     const [acceptTerms, setAcceptTerms] = useState(false);
+
+    // Load saved values on mount
+    useEffect(() => {
+        const saved = localStorage.getItem("paymentInfo");
+        if (saved) {
+            const data = JSON.parse(saved);
+            setRequireDeposit(data.requireDeposit ?? false);
+            setCancellationPolicy(data.cancellationPolicy ?? "24-hours");
+            setCustomPolicy(data.customPolicy ?? "");
+            setAcceptTerms(data.acceptTerms ?? false);
+        }
+    }, []);
+
+    const handleNext = () => {
+        localStorage.setItem(
+            "paymentInfo",
+            JSON.stringify({
+                requireDeposit,
+                cancellationPolicy,
+                customPolicy,
+                acceptTerms,
+            })
+        );
+        onNext();
+    };
 
     return (
         <div className="space-y-8">
@@ -104,7 +129,7 @@ export const PaymentInfo = ({ onNext, onBack }: PaymentInfoStepProps) => {
                 </button>
                 <Button
                 variant="dark"
-                    onClick={onNext}
+                    onClick={handleNext}
                     className="px-8 py-6 rounded-[5px] text-sm font-medium transition-colors"
                 >
                     Submit

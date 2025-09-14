@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
@@ -16,6 +16,7 @@ export const BusinessDetails = ({ onNext }: BusinessDetailsStepProps) => {
     const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
     const [bio, setBio] = useState("");
     const [homeService, setHomeService] = useState("yes");
+    const [ownerName, setOwnerName] = useState("");
 
     const categories = [
         "Barbershop", "Hair Salon", "Blow Drycolon", "Nail Salon", "Spa", "Make Up", "Others"
@@ -27,6 +28,24 @@ export const BusinessDetails = ({ onNext }: BusinessDetailsStepProps) => {
                 ? prev.filter(c => c !== category)
                 : [...prev, category]
         );
+    };
+
+    // Load from localStorage
+    useEffect(() => {
+        const saved = localStorage.getItem("businessDetails");
+        if (saved) {
+            const data = JSON.parse(saved);
+            setBusinessName(data.businessName ?? "");
+            setOwnerName(data.ownerName ?? "");
+        }
+    }, []);
+
+    const handleNext = () => {
+        localStorage.setItem(
+            "businessDetails",
+            JSON.stringify({ businessName, ownerName })
+        );
+        onNext();
     };
 
     // 
@@ -127,7 +146,7 @@ export const BusinessDetails = ({ onNext }: BusinessDetailsStepProps) => {
             <div className="flex justify-end">
                 <Button
                 variant="dark"
-                    onClick={onNext}
+                    onClick={handleNext}
                     className="px-8 py-3 rounded-[5px] py-6 text-sm font-medium transition-colors hover:bg-card-foreground"
                 >
                     Save & Continue

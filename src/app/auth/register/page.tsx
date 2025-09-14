@@ -6,7 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Checkbox } from '@/components/ui/checkbox';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
-import { AppleIcon, Eye, EyeOff } from 'lucide-react';
+import { AppleIcon, ArrowLeft, Eye, EyeOff } from 'lucide-react';
 import { GoogleIcon, LogoBlack } from '../../../../public/image/svgs';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -35,7 +35,11 @@ const Register = () => {
     return (
         <div className="min-h-screen flex">
             {/* Left Side - Form */}
-            <div className="flex-1 flex items-center text-black justify-center px-6 py-8 bg-white">
+            <div className="relative flex-1 flex items-center text-black justify-center px-6 py-8 bg-white">
+                <Button onClick={() => router.back()} className="bg-transparent border text-black absolute left-5 top-5 hover:bg-gray-50">
+                    <ArrowLeft /> Go Back
+                </Button>
+
                 <div className="w-full max-w-md space-y-8">
                     {/* Logo */}
                     <div className="text-center space-y-2">
