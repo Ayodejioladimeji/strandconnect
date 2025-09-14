@@ -73,7 +73,7 @@ const Register = () => {
                                 id="username"
                                 name="username"
                                 type="text"
-                                placeholder="claire@example.com"
+                                placeholder="claire"
                                 value={formData.username}
                                 onChange={handleInputChange}
                                 className="py-6 border rounded-[5px]"
