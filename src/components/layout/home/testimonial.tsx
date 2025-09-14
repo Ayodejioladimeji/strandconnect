@@ -58,12 +58,12 @@ const TestimonialsSection = () => {
                     </h2>
 
                     {/* Navigation */}
-                    <div className="absolute right-0 top-0 flex gap-4">
+                    <div className="absolute right-0 top-0 flex gap-4 ">
                         <Button
                             variant="ghost"
                             size="icon"
                             onClick={prevTestimonial}
-                            className="h-12 w-12 rounded-full bg-transparent border border-muted-foreground/30 hover:bg-muted-foreground/10 text-foreground hover:text-foreground transition-all duration-300 hover:scale-105"
+                            className="h-12 w-12 rounded-full bg-transparent border border-muted-foreground/30 hover:bg-muted-foreground/10 text-foreground hover:text-foreground transition-all duration-300 hover:scale-105 cur"
                         >
                             <ChevronLeft className="h-5 w-5" />
                         </Button>
@@ -71,7 +71,7 @@ const TestimonialsSection = () => {
                             variant="ghost"
                             size="icon"
                             onClick={nextTestimonial}
-                            className="h-12 w-12 rounded-full bg-transparent border border-muted-foreground/30 hover:bg-muted-foreground/10 text-foreground hover:text-foreground transition-all duration-300 hover:scale-105"
+                            className="h-12 w-12 rounded-full bg-transparent border border-muted-foreground/30 hover:bg-muted-foreground/10 text-foreground hover:text-foreground transition-all duration-300 hover:scale-105 cur"
                         >
                             <ChevronRight className="h-5 w-5" />
                         </Button>

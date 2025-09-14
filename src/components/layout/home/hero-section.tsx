@@ -2,8 +2,8 @@
 
 const HeroSection = () => {
     return (
-        <section className="bg-hero-gradient min-h-screen flex flex-col justify-center pt-16">
-            <div className="py-20">
+        <section className="bg-hero-gradient min-h-screen flex flex-col justify-center pt-20">
+            <div className="py-24">
                 {/* Hero Text */}
                 <div className="text-center mb-16">
                     <h1 className="text-4xl font-medium md:text-6xl lg:text-7xl font-light text-foreground mb-6 leading-tight">
