@@ -29,7 +29,7 @@ const Navbar = () => {
                             About
                         </Link>
 
-                        <Link href="/system-match" className="text-white hover:text-primary transition-colors">
+                        <Link href="/style-match" className="text-white hover:text-primary transition-colors">
                             StyleMatch AI
                         </Link>
                     </div>

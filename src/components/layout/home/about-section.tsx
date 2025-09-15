@@ -38,7 +38,7 @@ const AboutSection = () => {
                         <img
                             src="image/about-section.png"
                             alt="Professional hair styling tools and accessories"
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                         />
                     </div>
 

@@ -8,7 +8,7 @@ const CTASection = () => {
                     Want to know more about Strandconnect?
                 </h2>
 
-                <Button variant="dark" size="lg" className="px-8 py-6">
+                <Button variant="dark" size="lg" className="px-8 py-6 hover:bg-primary hover:text-black">
                     Connect with us
                 </Button>
             </div>

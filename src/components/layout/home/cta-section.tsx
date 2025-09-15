@@ -23,7 +23,7 @@ const CTASection = () => {
                     With StrandConnect, building your clientele has never been easier. Seamlessly sync your current calendar, showcase your talent, and watch the bookings roll in. No double booking, no app hopping, no stress.
                 </p>
 
-                <Button variant="dark" size="lg" className="px-10 py-6">
+                <Button variant="dark" size="lg" className="px-10 py-6 hover:bg-primary hover:text-black">
                     Join Us
                 </Button>
             </div>

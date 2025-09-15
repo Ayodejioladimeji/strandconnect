@@ -11,7 +11,7 @@ const StorySection = () => {
                             <img
                                 src="/image/about-story.png"
                                 alt="Professional woman smiling"
-                                className="w-full h-[500px] lg:h-[600px] object-cover shadow-2xl"
+                                className="w-full h-[500px] lg:h-[600px] object-cover shadow-2xl "
                             />
                         </div>
                     </div>

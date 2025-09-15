@@ -147,7 +147,7 @@ const Login = () => {
                     <img
                         src="/image/signup-image.png"
                         alt="Beautiful woman with natural curly hair"
-                        className="w-full h-full object-cover object-center"
+                        className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500"
                     />
                 </div>
             </div>

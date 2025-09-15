@@ -50,7 +50,7 @@ const ServicesSection = () => {
 
                     {/* CTA Button */}
                     <div>
-                        <Button variant="dark" size="lg" className="px-8 rounded-sm py-6">
+                        <Button variant="dark" size="lg" className="px-8 rounded-sm py-6 hover:bg-primary hover:text-black">
                             Search Stylists
                         </Button>
                     </div>
@@ -62,7 +62,7 @@ const ServicesSection = () => {
                         <img
                             src="/image/services-section.png"
                             alt="Beautiful woman with voluminous natural curly hair"
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                         />
                     </div>
                     {/* Decorative elements */}
