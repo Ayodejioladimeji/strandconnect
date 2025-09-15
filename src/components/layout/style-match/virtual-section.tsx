@@ -2,9 +2,9 @@ import { Button } from "@/components/ui/button";
 
 const VirtualSection = () => {
     return (
-        <section className="bg-dark text-muted-foreground py-20">
+        <section className="bg-background text-muted-foreground pt-[80px]">
             <div className="container mx-auto px-4 text-center max-w-4xl">
-                <h2 className="font-serif text-3xl lg:text-4xl font-medium mb-8">
+                <h2 className="font-serif text-3xl lg:text-4xl font-medium mb-[18px]">
                     Virtual Hairstyle Match
                 </h2>
                 <p className="text-base lg:text-base leading-relaxed text-muted">

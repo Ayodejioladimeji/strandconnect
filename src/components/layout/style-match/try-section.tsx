@@ -13,7 +13,7 @@ const TrySection = () => {
                 </div>
 
                 {/* Right side - Text content */}
-                <div className="order-1 lg:order-2 flex flex-col justify-center space-y-4 px-20">
+                <div className="order-1 lg:order-2 flex flex-col justify-center space-y-4 px-15">
                     <h2 className="text-3xl lg:text-4xl font-medium text-[#110000]">
                         Try Before You Style
                     </h2>

@@ -1,6 +1,6 @@
 const HowitWorks = () => {
     return (
-        <section className="bg-warm py-20">
+        <section className="bg-background pt-[116px] pb-[80px]">
             <div className="container mx-auto px-4 text-center">
                 <h2 className="text-3xl lg:text-4xl font-medium mb-16 text-muted-foreground">
                     How it Works
