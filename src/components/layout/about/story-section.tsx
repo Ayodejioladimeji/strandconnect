@@ -4,7 +4,7 @@ const StorySection = () => {
     return (
         <section className="bg-background pt-16 lg:pt-24">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div className="grid md:grid-cols-2 gap-8 lg:gap-16 items-center">
                     {/* Image */}
                     <div className="order-2 lg:order-1">
                         <div className="relative">
@@ -17,7 +17,7 @@ const StorySection = () => {
                     </div>
 
                     {/* Content */}
-                    <div className="order-1 lg:order-2 text-white space-y-6 pb-10">
+                    <div className="order-1 lg:order-2 text-white space-y-6 md:pb-10">
                         <h2 className="text-3xl lg:text-4xl font-light mb-8">Our Story</h2>
 
                         <div className="space-y-4 text-muted leading-relaxed">

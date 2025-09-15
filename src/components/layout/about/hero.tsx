@@ -13,7 +13,7 @@ const AboutHero = () => {
             <div className="absolute inset-0" />
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 container">
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold text-white tracking-wide">
+                <h1 className="text-center md:text-left text-5xl md:text-6xl lg:text-7xl font-semibold text-white tracking-wide">
                     About Us
                 </h1>
             </div>

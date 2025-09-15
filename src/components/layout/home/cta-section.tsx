@@ -1,11 +1,10 @@
 import { Button } from "@/components/ui/button";
-import salonService from "@/assets/salon-service.jpg";
 
 const CTASection = () => {
     return (
         <section className="bg-foreground pb-20">
             {/* Hero Image */}
-            <div className="aspect-[16/9] md:aspect-[21/9] overflow-hidden shadow-soft mb-12">
+            <div className="aspect-[16/9] md:aspect-[25/9] overflow-hidden shadow-soft mb-12">
                 <img
                     src="/image/booking.png"
                     alt="Professional hair stylist working on client in luxury salon"
