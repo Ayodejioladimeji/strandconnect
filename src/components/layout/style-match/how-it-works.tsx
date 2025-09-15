@@ -1,3 +1,4 @@
+
 const HowitWorks = () => {
     return (
         <section className="bg-background pt-[116px] pb-[80px]">
@@ -6,11 +7,11 @@ const HowitWorks = () => {
                     How it Works
                 </h2>
 
-                <div className="grid md:grid-cols-3 gap-0 w-full lg:max-w-4xl mx-auto">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-0 w-full lg:max-w-4xl mx-auto">
                     {/* Step 1 */}
                     <div className="flex flex-col items-center space-y-6">
                         <div className="text-center min-h-[80px] -mt-2 flex flex-col justify-end">
-                            <h3 className="font-serif text-2xl font-medium text-primary mb-2">Step 1</h3>
+                            <h3 className="text-2xl font-medium text-primary mb-2">Step 1</h3>
                             <p className="text-muted-foreground text-base">Take a photo</p>
                         </div>
 
@@ -18,7 +19,7 @@ const HowitWorks = () => {
                             <img
                                 src="/image/style-step1.png"
                                 alt="Take a photo"
-                                className="w-48 h-60 object-cover rounded-2xl shadow-lg hover:scale-105 transition-transform duration-500"
+                                className="w-40 sm:w-44 md:w-48 h-56 sm:h-60 object-cover rounded-2xl shadow-lg hover:scale-105 transition-transform duration-500"
                             />
                         </div>
                     </div>
@@ -26,7 +27,7 @@ const HowitWorks = () => {
                     {/* Step 2 */}
                     <div className="flex flex-col items-center space-y-6">
                         <div className="text-center min-h-[80px] -mt-5 flex flex-col justify-end">
-                            <h3 className="font-serif text-2xl font-medium text-primary mb-2">Step 2</h3>
+                            <h3 className="text-2xl font-medium text-primary mb-2">Step 2</h3>
                             <p className="text-muted-foreground text-base">
                                 Our AI technology identifies your<br />unique hairstyle.
                             </p>
@@ -35,7 +36,7 @@ const HowitWorks = () => {
                             <img
                                 src="/image/style-step2.png"
                                 alt="AI technology identifies your unique hairstyle"
-                                className="w-48 h-60 object-cover rounded-2xl shadow-lg hover:scale-105 transition-transform duration-500"
+                                className="w-40 sm:w-44 md:w-48 h-56 sm:h-60 object-cover rounded-2xl shadow-lg hover:scale-105 transition-transform duration-500"
                             />
                         </div>
                     </div>
@@ -43,14 +44,14 @@ const HowitWorks = () => {
                     {/* Step 3 */}
                     <div className="flex flex-col items-center space-y-6">
                         <div className="text-center min-h-[80px] -mt-2 flex flex-col justify-end">
-                            <h3 className="font-serif text-2xl font-medium text-primary mb-2">Step 3</h3>
+                            <h3 className="text-2xl font-medium text-primary mb-2">Step 3</h3>
                             <p className="text-muted-foreground text-base">Book the look</p>
                         </div>
                         <div className="relative p-2 bg-[#3b3838] rounded-lg">
                             <img
                                 src="/image/style-step3.png"
                                 alt="Book the look"
-                                className="w-48 h-60 object-cover rounded-2xl shadow-lg hover:scale-105 transition-transform duration-500"
+                                className="w-40 sm:w-44 md:w-48 h-56 sm:h-60 object-cover rounded-2xl shadow-lg hover:scale-105 transition-transform duration-500"
                             />
                         </div>
                     </div>
