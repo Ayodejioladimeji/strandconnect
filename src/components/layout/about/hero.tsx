@@ -2,7 +2,7 @@ import heroImage from "@/assets/hero-woman.jpg";
 
 const AboutHero = () => {
     return (
-        <section className="relative h-[60vh] md:h-[70vh] pt-40 flex items-center justify-start bg-foreground overflow-hidden">
+        <section className="relative h-[60vh] md:h-[70vh] pt-10 flex items-center justify-start bg-foreground overflow-hidden">
             <div
                 className="absolute inset-0 bg-cover bg-center bg-no-repeat hover:scale-105 transition-transform duration-500 bg-foreground"
                 style={{
@@ -10,9 +10,9 @@ const AboutHero = () => {
                     backgroundPosition: 'center',
                 }}
             />
-            <div className="absolute inset-0 bg-terracotta/30" />
+            <div className="absolute inset-0" />
 
-            <div className="relative z-10 container mx-auto px-6 lg:px-12">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 container">
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold text-white tracking-wide">
                     About Us
                 </h1>

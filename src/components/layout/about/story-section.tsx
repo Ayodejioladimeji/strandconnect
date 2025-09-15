@@ -2,8 +2,8 @@ import storyImage from "@/assets/story-woman.jpg";
 
 const StorySection = () => {
     return (
-        <section className="bg-dark-charcoal py-16 lg:py-24">
-            <div className="container mx-auto px-6 lg:px-12">
+        <section className="bg-background pt-16 lg:pt-24">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                     {/* Image */}
                     <div className="order-2 lg:order-1">
@@ -11,13 +11,13 @@ const StorySection = () => {
                             <img
                                 src="/image/about-story.png"
                                 alt="Professional woman smiling"
-                                className="w-full h-[500px] lg:h-[600px] object-cover shadow-2xl "
+                                className="w-full h-[500px] lg:h-[750px] object-cover shadow-2xl "
                             />
                         </div>
                     </div>
 
                     {/* Content */}
-                    <div className="order-1 lg:order-2 text-white space-y-6">
+                    <div className="order-1 lg:order-2 text-white space-y-6 pb-10">
                         <h2 className="text-3xl lg:text-4xl font-light mb-8">Our Story</h2>
 
                         <div className="space-y-4 text-muted leading-relaxed">
