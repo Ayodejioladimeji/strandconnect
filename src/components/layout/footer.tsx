@@ -1,19 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Instagram, Facebook, Twitter } from "lucide-react";
 import { FacebookIcon, InstagramIcon, Logo, TiktokIcon, XIcon } from "../../../public/image/svgs";
 
 const Footer = () => {
     return (
         <footer className="bg-background pt-16 pb-10">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between gap-12 mb-12">
-                    {/* Left - Logo and Newsletter */}
-                    <div className="space-y-6 w-[400px]">
-                        {/* Logo */}
+                <div className="flex flex-wrap justify-between gap-12 mb-12">
+                    <div className="space-y-6 w-full md:w-[400px]">
                         <Logo />
-
-                        {/* Newsletter */}
                         <div>
                             <h3 className="font-body text-2xl font-medium text-foreground mb-3">
                                 Find Your Perfect Stylist
@@ -22,20 +17,17 @@ const Footer = () => {
                                 Explore and book stylists near you from the comfortable to
                                 QLIK click. Start your style call to the best.
                             </p>
-
                             <label className="font-body text-sm text-muted-foreground block mb-2">Subscribe to our newsletter</label>
-                            <div className="relative flex space-x-2">
+                            <div className="relative w-full">
                                 <Input
                                     placeholder="Enter your email"
-                                    className="flex-1 bg-white py-6 border-border text-card-foreground placeholder:text-gray-500"
+                                    className="w-full bg-white py-6 border-border text-card-foreground placeholder:text-gray-500"
                                 />
                                 <Button variant="dark" className="absolute right-3 top-1/2 transform -translate-y-1/2">
                                     Subscribe
                                 </Button>
                             </div>
                         </div>
-
-                        {/* Social Links */}
                         <div className="flex items-center gap-4 cursor-pointer">
                             <InstagramIcon />
                             <FacebookIcon />
@@ -44,7 +36,7 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    <div>
+                    <div className="w-full sm:w-auto">
                         <h4 className="font-body text-sm font-semibold text-white mb-4 uppercase tracking-wide">
                             Explore
                         </h4>
@@ -67,7 +59,7 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    <div>
+                    <div className="w-full sm:w-auto">
                         <h4 className="font-body text-sm font-semibold text-white mb-4 uppercase tracking-wide">
                             Support
                         </h4>
@@ -90,7 +82,7 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    <div>
+                    <div className="w-full sm:w-auto">
                         <h4 className="font-body text-sm font-semibold text-white mb-4 uppercase tracking-wide">
                             Contact
                         </h4>
@@ -107,10 +99,8 @@ const Footer = () => {
                             </p>
                         </div>
                     </div>
-
                 </div>
 
-                {/* Bottom */}
                 <div className="border-t border-border pt-8">
                     <p className="font-body text-sm text-muted-foreground text-center">
                         © 2025 | StrandConnect, Inc.
