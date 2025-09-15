@@ -5,7 +5,7 @@ import { MapPin, Calendar } from "lucide-react";
 
 const SearchBooking = () => {
     return (
-        <section className="bg-background py-16 -mt-20 relative z-10">
+        <section className="bg-background pb-[80px] relative z-10">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="shadow-elegant p-8 border border-border">
                     <div className="flex items-center justify-between flex-wrap gap-2">

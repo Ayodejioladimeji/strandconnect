@@ -5,7 +5,7 @@ import { FacebookIcon, InstagramIcon, Logo, TiktokIcon, XIcon } from "../../../p
 
 const Footer = () => {
     return (
-        <footer className="bg-hero-gradient pt-16 pb-10">
+        <footer className="bg-background pt-16 pb-10">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between gap-12 mb-12">
                     {/* Left - Logo and Newsletter */}
@@ -45,7 +45,7 @@ const Footer = () => {
                     </div>
 
                     <div>
-                        <h4 className="font-heading text-sm font-semibold text-primary mb-4 uppercase tracking-wide">
+                        <h4 className="font-body text-sm font-semibold text-white mb-4 uppercase tracking-wide">
                             Explore
                         </h4>
                         <ul className="space-y-4">
@@ -68,7 +68,7 @@ const Footer = () => {
                     </div>
 
                     <div>
-                        <h4 className="font-heading text-sm font-semibold text-primary mb-4 uppercase tracking-wide">
+                        <h4 className="font-body text-sm font-semibold text-white mb-4 uppercase tracking-wide">
                             Support
                         </h4>
                         <ul className="space-y-4">
@@ -91,7 +91,7 @@ const Footer = () => {
                     </div>
 
                     <div>
-                        <h4 className="font-heading text-sm font-semibold text-primary mb-4 uppercase tracking-wide">
+                        <h4 className="font-body text-sm font-semibold text-white mb-4 uppercase tracking-wide">
                             Contact
                         </h4>
                         <div className="space-y-4">

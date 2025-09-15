@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     siteName: "Strand Connect",
     images: [
       {
-        url: "https://res.cloudinary.com/dqhdtwbx5/image/upload/v1757900624/signup-image_ctclkc.png",
+        url: "https://res.cloudinary.com/dqhdtwbx5/image/upload/v1757903568/og_n5vrpe.png",
         width: 1200,
         height: 630,
         alt: "Strand Connect - Hair Stylist Booking App for Europe",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     title: "Strand Connect - Find Your Next Hairstyle in Europe",
     description:
       "Strand Connect is the e-commerce platform that connects hairstylists and customers across the EU. We are revolutionizing the way hair salons work. ",
-    images: ["https://res.cloudinary.com/dqhdtwbx5/image/upload/v1757900624/signup-image_ctclkc.png"],
+    images: ["https://res.cloudinary.com/dqhdtwbx5/image/upload/v1757903568/og_n5vrpe.png"],
   },
   alternates: {
     canonical: "https://strandconnect.com",

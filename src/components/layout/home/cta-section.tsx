@@ -15,11 +15,11 @@ const CTASection = () => {
 
             {/* Content */}
             <div className="text-center max-w-4xl mx-auto">
-                <h2 className="font-heading text-4xl md:text-5xl font-semibold text-black mb-6 leading-tight">
+                <h2 className="font-heading text-4xl md:text-5xl font-semibold text-black mb-[18px] leading-tight">
                     Be the Stylist Everyone's Booking.
                 </h2>
 
-                <p className="font-body text-lg text-black font-light mb-8 leading-relaxed">
+                <p className="font-body text-lg text-black font-light mb-[38px] leading-relaxed">
                     With StrandConnect, building your clientele has never been easier. Seamlessly sync your current calendar, showcase your talent, and watch the bookings roll in. No double booking, no app hopping, no stress.
                 </p>
 

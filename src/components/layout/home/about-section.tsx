@@ -2,10 +2,10 @@
 
 const AboutSection = () => {
     return (
-        <section className="bg-hero-gradient py-20">
+        <section className="bg-background pb-[96px]">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Main Heading */}
-                <div className="text-center mb-16">
+                <div className="text-center mb-[64px]">
                     <h2 className="font-heading text-3xl md:text-5xl font-light text-foreground leading-tight">
                         Designed around the needs of{" "}
                         <span className="text-primary font-medium">Black women</span>,<br />
@@ -15,7 +15,7 @@ const AboutSection = () => {
                 </div>
 
                 {/* Content Grid */}
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10 items-start">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-start">
 
                     <div>
                         <h3 className="font-heading text-2xl font-semibold text-muted-foreground mb-4">
@@ -43,7 +43,7 @@ const AboutSection = () => {
                     </div>
 
                     {/* Right Content */}
-                    <div>
+                    <div className="lg:mt-[80px]">
                         <h3 className="font-heading text-2xl font-semibold text-muted-foreground mb-4">
                             Ease
                         </h3>
