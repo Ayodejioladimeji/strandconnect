@@ -1,12 +1,10 @@
-
-
 const HeroSection = () => {
     return (
         <section className="bg-background min-h-screen flex flex-col justify-center pt-20">
             <div className="py-24 pb-[24px]">
                 {/* Hero Text */}
                 <div className="text-center mb-16">
-                    <h1 className="text-4xl font-medium md:text-6xl lg:text-7xl font-light text-foreground mb-6 leading-tight">
+                    <h1 className="text-5xl font-medium md:text-6xl lg:text-7xl font-light text-foreground mb-6 leading-tight">
                         Where Every Day is a{" "}
                         <span className="text-primary">Good Hair Day</span>
                     </h1>
@@ -17,7 +15,7 @@ const HeroSection = () => {
 
                 {/* Hair Gallery */}
                 <div className="flex justify-between items-end gap-4 md:gap-6 overflow-hidden">
-                    <div className="w-[290px] h-[320px] rounded-lg rounded-l-none rounded-b-none overflow-hidden">
+                    <div className="hidden md:block w-[290px] h-[320px] rounded-lg rounded-l-none rounded-b-none overflow-hidden">
                         <img
                             src="/image/hero1.png"
                             alt="Beautiful box braids hairstyle"
@@ -45,7 +43,7 @@ const HeroSection = () => {
                             className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                         />
                     </div>
-                    <div className="w-[290px] h-[320px] rounded-lg rounded-b-none  rounded-r-none overflow-hidden shadow-elegant">
+                    <div className="hidden md:block w-[290px] h-[320px] rounded-lg rounded-b-none  rounded-r-none overflow-hidden shadow-elegant">
                         <img
                             src="/image/hero5.png"
                             alt="Protective twisted hairstyle"

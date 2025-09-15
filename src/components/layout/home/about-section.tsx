@@ -6,16 +6,23 @@ const AboutSection = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Main Heading */}
                 <div className="text-center mb-[64px]">
-                    <h2 className="font-heading text-3xl md:text-5xl font-light text-foreground leading-tight">
+                    <h2 className="hidden lg:block font-heading text-3xl md:text-5xl font-light text-foreground leading-tight">
                         Designed around the needs of{" "}
                         <span className="text-primary font-medium">Black women</span>,<br />
                         we make connecting with the right stylist<br />
                         <span className="text-primary font-medium">simple and seamless</span>
                     </h2>
+
+                    <h2 className="block lg:hidden font-heading text-3xl md:text-4xl font-light text-foreground leading-tight">
+                        Designed around the needs of{" "}
+                        <span className="text-primary font-medium">Black women</span>,
+                        we make connecting with the right stylist
+                        <span className="text-primary font-medium">simple and seamless</span>
+                    </h2>
                 </div>
 
                 {/* Content Grid */}
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-start">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-start">
 
                     <div>
                         <h3 className="font-heading text-2xl font-semibold text-muted-foreground mb-4">
@@ -34,7 +41,7 @@ const AboutSection = () => {
                         </p>
                     </div>
 
-                    <div className="aspect-[3/4] overflow-hidden shadow-elegant">
+                    <div className="md:aspect-[3/4] overflow-hidden shadow-elegant">
                         <img
                             src="image/about-section.png"
                             alt="Professional hair styling tools and accessories"

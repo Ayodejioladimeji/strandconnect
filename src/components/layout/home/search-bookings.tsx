@@ -7,11 +7,11 @@ const SearchBooking = () => {
     return (
         <section className="bg-background pb-[80px] relative z-10">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="shadow-elegant p-8 border border-border">
+                <div className="shadow-elegant px-5 py-8 lg:px-8 border border-border">
                     <div className="flex items-center justify-between flex-wrap gap-2">
                         {/* Services */}
                         <Select>
-                            <SelectTrigger className="bg-transparent py-6 border-border text-white w-[40%] data-[placeholder]:text-white">
+                            <SelectTrigger className="bg-transparent py-6 border-border text-white w-full sm:w-[49%] md:w-[40%] data-[placeholder]:text-white">
                                 <SelectValue placeholder="Select service" />
                             </SelectTrigger>
                             <SelectContent>
@@ -23,10 +23,8 @@ const SearchBooking = () => {
                             </SelectContent>
                         </Select>
 
-
-
                         {/* Location */}
-                        <div className="relative w-[40%]">
+                        <div className="relative w-full sm:w-[49%] md:w-[40%]">
                             <MapPin color="white" className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-white" />
                             <Input
                                 placeholder="Enter location"
@@ -35,7 +33,7 @@ const SearchBooking = () => {
                         </div>
 
                         {/* Search Button */}
-                        <Button variant="accent" className="py-6 rounded-sm text-black px-8 w-[15%]">
+                        <Button variant="accent" className="py-6 rounded-sm text-black px-8 w-full md:w-[15%]">
                             Search
                         </Button>
                     </div>

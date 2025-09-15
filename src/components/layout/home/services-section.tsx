@@ -7,7 +7,7 @@ const ServicesSection = () => {
             <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 items-center">
                 {/* Left Content */}
                 <div className="pr-28 py-20">
-                    <h2 className="font-heading text-4xl md:text-5xl font-bold text-secondary-foreground mb-[45px] leading-[54px]">
+                    <h2 className="font-heading text-4xl md:text-5xl font-bold text-secondary-foreground mb-[45px] lg:leading-[54px]">
                         Seamless bookings.<br />
                         Trusted stylists.
                     </h2>
@@ -15,7 +15,7 @@ const ServicesSection = () => {
                     {/* Steps */}
                     <div className="space-y-[30px]">
                         <div>
-                            <h3 className="font-body text-2xl font-medium text-secondary-foreground mb-[17px]">
+                            <h3 className="font-body text-lg md:text-2xl font-medium text-secondary-foreground mb-[17px]">
                                 Search for Stylists
                             </h3>
                             <p className="font-body text-secondary-foreground/70 leading-relaxed">
@@ -25,7 +25,7 @@ const ServicesSection = () => {
                         </div>
 
                         <div>
-                            <h3 className="font-body text-2xl font-medium text-secondary-foreground mb-[17px]">
+                            <h3 className="font-body text-lg md:text-2xl font-medium text-secondary-foreground mb-[17px]">
                                 Choose a Professional
                             </h3>
                             <p className="font-body text-secondary-foreground/70 leading-relaxed">
@@ -35,7 +35,7 @@ const ServicesSection = () => {
                         </div>
 
                         <div>
-                            <h3 className="font-body text-2xl font-medium text-secondary-foreground mb-[17px]">
+                            <h3 className="font-body text-lg md:text-2xl font-medium text-secondary-foreground mb-[17px]">
                                 Book!
                             </h3>
                             <p className="font-body text-secondary-foreground/70 leading-relaxed">
@@ -45,14 +45,14 @@ const ServicesSection = () => {
                         </div>
                     </div>
 
-                    <Button variant="dark" size="lg" className="px-8 rounded-sm py-6 hover:bg-primary hover:text-black mt-[40px]">
+                    <Button variant="dark" size="lg" className="px-8 rounded-sm py-6 hover:bg-primary hover:text-black md:mt-[40px]">
                         Search Stylists
                     </Button>
                 </div>
 
                 {/* Right Image */}
                 <div className="relative">
-                    <div className="aspect-[3/3] overflow-hidden shadow-soft">
+                    <div className="aspect-[5/3] lg:aspect-[3/3] overflow-hidden shadow-soft">
                         <img
                             src="/image/services-section.png"
                             alt="Beautiful woman with voluminous natural curly hair"
@@ -80,7 +80,7 @@ export default ServicesSection;
 
         <div className="space-y-8">
             <div>
-                <h3 className="font-heading text-2xl font-bold text-secondary-foreground mb-3">
+                <h3 className="font-heading text-lg md:text-2xl font-bold text-secondary-foreground mb-3">
                     Search for Stylists
                 </h3>
                 <p className="font-body text-secondary-foreground/70 leading-relaxed">
@@ -90,7 +90,7 @@ export default ServicesSection;
             </div>
 
             <div>
-                <h3 className="font-heading text-2xl font-bold text-secondary-foreground mb-3">
+                <h3 className="font-heading text-lg md:text-2xl font-bold text-secondary-foreground mb-3">
                     Choose a Professional
                 </h3>
                 <p className="font-body text-secondary-foreground/70 leading-relaxed">
@@ -100,7 +100,7 @@ export default ServicesSection;
             </div>
 
             <div>
-                <h3 className="font-heading text-2xl font-bold text-secondary-foreground mb-3">
+                <h3 className="font-heading text-lg md:text-2xl font-bold text-secondary-foreground mb-3">
                     Book!
                 </h3>
                 <p className="font-body text-secondary-foreground/70 leading-relaxed">
