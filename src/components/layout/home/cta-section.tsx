@@ -14,7 +14,7 @@ const CTASection = () => {
             </div>
 
             {/* Content */}
-            <div className="text-center max-w-4xl mx-auto">
+            <div className="text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 className="font-heading text-4xl md:text-5xl font-semibold text-black mb-[18px] leading-tight">
                     Be the Stylist Everyone's Booking.
                 </h2>

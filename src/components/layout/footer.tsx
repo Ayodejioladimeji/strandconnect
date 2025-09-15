@@ -10,7 +10,7 @@ const Footer = () => {
                     <div className="space-y-6 w-full md:w-[400px]">
                         <Logo />
                         <div>
-                            <h3 className="font-body text-2xl font-medium text-foreground mb-3">
+                            <h3 className="font-body text-lg md:text-2xl font-medium text-foreground mb-3">
                                 Find Your Perfect Stylist
                             </h3>
                             <p className="font-body text-sm text-muted-foreground mb-4">
