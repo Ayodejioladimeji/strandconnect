@@ -6,7 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Checkbox } from '@/components/ui/checkbox';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
-import { AppleIcon, ArrowLeft, Eye, EyeOff } from 'lucide-react';
+import { ArrowLeft, Eye, EyeOff } from 'lucide-react';
 import { GoogleIcon, LogoBlack } from '../../../../public/image/svgs';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -33,20 +33,26 @@ const Register = () => {
     };
 
     return (
-        <div className="min-h-screen flex">
+        <div className="min-h-screen flex flex-col lg:flex-row">
             {/* Left Side - Form */}
-            <div className="relative flex-1 flex items-center text-black justify-center px-6 py-8 bg-white">
-                <Button onClick={() => router.back()} className="bg-transparent border text-black absolute left-5 top-5 hover:bg-gray-50">
-                    <ArrowLeft /> Go Back
+            <div className="relative flex-1 flex items-center justify-center px-4 sm:px-6 md:px-10 py-8 bg-white text-black">
+                <Button
+                    onClick={() => router.back()}
+                    className="bg-transparent border text-black absolute left-4 top-4 sm:left-6 sm:top-6 hover:bg-gray-50 text-sm sm:text-base"
+                >
+                    <ArrowLeft className="h-4 w-4 sm:h-5 sm:w-5" />
+                    <span className="ml-1 hidden sm:inline">Go Back</span>
                 </Button>
 
                 <div className="w-full max-w-md space-y-8">
                     {/* Logo */}
                     <div className="text-center space-y-2">
-                        <div className="flex justify-center mt-10">
+                        <div className="flex justify-center mt-8 sm:mt-10">
                             <LogoBlack />
                         </div>
-                        <h1 className="text-3xl font-bold text-black mt-5">Sign Up</h1>
+                        <h1 className="text-2xl sm:text-3xl font-bold text-black mt-4 sm:mt-5">
+                            Sign Up
+                        </h1>
                     </div>
 
                     {/* Form */}
@@ -54,7 +60,11 @@ const Register = () => {
                         {/* User Type Selection */}
                         <div className="space-y-3">
                             <Label className="text-sm font-medium">Account Type</Label>
-                            <RadioGroup value={userType} onValueChange={setUserType} className="flex gap-6">
+                            <RadioGroup
+                                value={userType}
+                                onValueChange={setUserType}
+                                className="flex flex-col sm:flex-row gap-4 sm:gap-6"
+                            >
                                 <div className="flex items-center space-x-2">
                                     <RadioGroupItem value="user" id="user" />
                                     <Label htmlFor="user" className="text-sm cursor-pointer">
@@ -82,7 +92,7 @@ const Register = () => {
                                 placeholder="claire"
                                 value={formData.username}
                                 onChange={handleInputChange}
-                                className="py-6 border rounded-[5px]"
+                                className="py-5 sm:py-6 border rounded-[5px]"
                                 required
                             />
                         </div>
@@ -99,18 +109,18 @@ const Register = () => {
                                 placeholder="claire@example.com"
                                 value={formData.email}
                                 onChange={handleInputChange}
-                                className="py-6 border rounded-[5px]"
+                                className="py-5 sm:py-6 border rounded-[5px]"
                                 required
                             />
                         </div>
 
                         {/* Password */}
-                        <div className="">
+                        <div>
                             <div className="flex justify-between items-center">
                                 <Label htmlFor="password" className="text-sm font-medium text-text-dark">
                                     Password
                                 </Label>
-                                <Button variant="link" size="sm" type="button" className="text-xs text-primary-foreground">
+                                <Button variant="link" size="sm" type="button" className="text-xs sm:text-sm text-primary-foreground">
                                     Forgot password?
                                 </Button>
                             </div>
@@ -124,11 +134,11 @@ const Register = () => {
                                     value={formData.password}
                                     onChange={handleInputChange}
                                     required
-                                    className="pr-10 py-6 rounded-[5px] border focus:outline-none focus:ring-0 focus:border-red-400"
+                                    className="pr-10 py-5 sm:py-6 rounded-[5px] border"
                                 />
                                 <button
                                     type="button"
-                                    className="absolute right-3 top-1/2 -translate-y-1/2 text-text-muted hover:text-text-dark cursor-pointer"
+                                    className="absolute right-3 top-1/2 -translate-y-1/2 text-text-muted hover:text-text-dark"
                                     onClick={() => setShowPassword(!showPassword)}
                                 >
                                     {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
@@ -146,8 +156,8 @@ const Register = () => {
                                 }
                                 className="mt-0.5"
                             />
-                            <div className="text-sm font-light cursor-pointer">
-                                By clicking 'Sign Up' I agree to StrandConnect {" "}
+                            <div className="text-xs sm:text-sm font-light cursor-pointer">
+                                By clicking 'Sign Up' I agree to StrandConnect{" "}
                                 <Link href="/terms-of-service" className="font-medium underline cursor-pointer">
                                     Terms of Service
                                 </Link>
@@ -158,16 +168,15 @@ const Register = () => {
                         <Button
                             type="submit"
                             variant="dark"
-                            className="w-full py-6"
+                            className="w-full py-5 sm:py-6"
                             disabled={!formData.agreeToTerms}
                             onClick={() => router.push("/onboarding")}
                         >
                             Sign up
                         </Button>
 
-
-                        <div className="relative flex justify-center text-sm">
-                            <span className="bg-form-background px-4 text-text-muted">
+                        <div className="relative flex justify-center text-xs sm:text-sm">
+                            <span className="bg-form-background px-3 sm:px-4 text-text-muted">
                                 or Sign up with
                             </span>
                         </div>
@@ -180,8 +189,8 @@ const Register = () => {
 
                         {/* Login Link */}
                         <div className="text-center">
-                            <span className="text-sm text-text-muted">Already have an account? </span>
-                            <Link href="/auth/login" className="text-sm text-link-color hover:text-brand-orange-light font-medium hover:underline">
+                            <span className="text-xs sm:text-sm text-text-muted">Already have an account? </span>
+                            <Link href="/auth/login" className="text-xs sm:text-sm text-link-color hover:text-brand-orange-light font-medium hover:underline">
                                 Login
                             </Link>
                         </div>
