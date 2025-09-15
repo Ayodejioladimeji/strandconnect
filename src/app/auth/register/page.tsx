@@ -195,7 +195,7 @@ const Register = () => {
                     className="absolute inset-0 bg-gradient-to-br from-brand-orange to-brand-brown"
                     style={{ background: 'var(--hero-gradient)' }}
                 />
-                <div className="relative flex items-center justify-center w-full">
+                <div className="relative flex items-center justify-center w-full bg-foreground">
                     <img
                         src="/image/signup-image.png"
                         alt="Beautiful woman with natural curly hair"

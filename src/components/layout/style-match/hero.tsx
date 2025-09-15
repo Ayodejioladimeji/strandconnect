@@ -3,9 +3,9 @@ import { Button } from "@/components/ui/button";
 
 const StylematchHero = () => {
     return (
-        <section className="relative h-[60vh] md:h-[70vh] pt-40 flex items-center justify-start bg-terracotta-light overflow-hidden">
+        <section className="relative h-[60vh] md:h-[70vh] pt-40 flex items-center justify-start bg-foreground overflow-hidden">
             <div
-                className="absolute inset-0 bg-cover bg-center bg-no-repeat hover:scale-105 transition-transform duration-500"
+                className="absolute inset-0 bg-cover bg-center bg-no-repeat hover:scale-105 transition-transform duration-500 bg-foreground"
                 style={{
                     backgroundImage: `url("/image/style-hero.png")`,
                     backgroundPosition: 'center',

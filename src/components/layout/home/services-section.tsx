@@ -3,7 +3,7 @@ import bookingPortrait from "@/assets/booking-portrait.jpg";
 
 const ServicesSection = () => {
     return (
-        <section className="bg-foreground">
+        <section className="bg-foreground overflow-x-hidden">
             <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
                 {/* Left Content */}
                 <div className="space-y-10 sm:px-6 lg:px-27">
