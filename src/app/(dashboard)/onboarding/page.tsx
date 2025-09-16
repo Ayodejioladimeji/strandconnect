@@ -45,7 +45,7 @@ const OnboardingPage = () => {
             {currentStep < 3 && (
                 <ProgressIndicator steps={steps} currentStep={currentStep} />
             )}
-            <Card className="border border-muted max-w-3xl mx-auto px-20 py-10 shadow-sm">
+            <Card className="border border-muted w-full md:max-w-3xl mx-auto px-6 md:px-20 py-10 shadow-sm">
                 <div className="bg-white">
                     {renderStep()}
                 </div>
